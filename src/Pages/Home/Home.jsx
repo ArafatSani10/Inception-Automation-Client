@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <div
-            className="hero h-screen relative  "
+            className="hero h-[70vh] max-sm:h-[86vh] relative  "
             style={{
                 backgroundImage: 'url("https://img.freepik.com/free-vector/worldmap-background-design_1127-2318.jpg?t=st=1738158943~exp=1738162543~hmac=3395ce8a21326c35cf995e983ed721660677590ec99310e33fce153d3130ddcf&w=996")',
                 backgroundSize: 'cover',
