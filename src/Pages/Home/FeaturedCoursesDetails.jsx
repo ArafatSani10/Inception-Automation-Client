@@ -1,10 +1,19 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 const FeaturedCoursesDetails = () => {
     const { courseName, instructorName } = useLoaderData();  // Course name and instructor name are loaded here
 
     return (
-        <div className="max-w-full">  {/* Container for the full page */}
+        <div className="max-w-full">
+            <Helmet>
+                <title>
+                    Master Generative AI in Bangla | inceptionBD
+                </title>
+                
+                </Helmet>
+
+
             {/* Background Image Section with overlay */}
             <div className="relative w-full h-[430px]">
                 {/* Background Image */}
@@ -39,8 +48,8 @@ const FeaturedCoursesDetails = () => {
 
                     {/* Instructor Name */}
                     <p className="text-white text-sm mt-6">
-                        <span className="text-[12px]">created by</span> 
-                        <span className="underline">{instructorName}</span> 
+                        <span className="text-[12px]">created by</span>
+                        <span className="underline">{instructorName}</span>
                     </p>
                 </div>
             </div>
