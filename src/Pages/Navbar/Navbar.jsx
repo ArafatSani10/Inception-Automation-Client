@@ -9,7 +9,7 @@ const Navbar = () => {
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
+    
 
     const handleLinkClick = () => {
         setIsMenuOpen(false);
@@ -35,7 +35,7 @@ const Navbar = () => {
                         <button className='btn bg-gray-300 text-2xl'><FaTable></FaTable>Categories</button>
                         <li><a href="#home" className="hover:text-green-500 transition-all duration-300">Home</a></li>
                         <li><a href="#about" className="hover:text-green-500 transition-all duration-300">Courses</a></li>
-                        <li><a href="#services" className="hover:text-green-500 transition-all duration-300">Instruction</a></li>
+                        <li><a href="#services" className="hover:text-green-500 transition-all duration-300">Instructors</a></li>
                         <li><a href="#contact" className="hover:text-green-500 transition-all duration-300">Store</a></li>
                         <li><a href="#blog" className="hover:text-green-500 transition-all duration-300">Forums</a></li>
                         <li><a href="#blog" className="hover:text-green-500 transition-all duration-300">Inception Automation</a></li>
@@ -68,10 +68,11 @@ const Navbar = () => {
                 >
                     <ul className="text-black p-6 space-y-6">
                         <li><a href="#home" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>Home</a></li>
-                        <li><a href="#about" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>About</a></li>
-                        <li><a href="#services" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>Services</a></li>
-                        <li><a href="#contact" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>Contact</a></li>
-                        <li><a href="#blog" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>Blog</a></li>
+                        <li><a href="#about" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>Courses</a></li>
+                        <li><a href="#services" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>Instructors</a></li>
+                        <li><a href="#contact" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>store</a></li>
+                        <li><a href="#blog" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>Forums</a></li>
+                        <li><a href="#blog" className="block py-2 text-lg font-medium" onClick={handleLinkClick}>inception Automation</a></li>
                     </ul>
 
                     {/* Close Button */}
