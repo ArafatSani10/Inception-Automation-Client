@@ -2,6 +2,7 @@ import React from 'react';
 import Swal from 'sweetalert2';
 
 const AddFeatured = () => {
+
     const handleAddCourse = e => {
         e.preventDefault();
         const form = e.target;
@@ -14,32 +15,32 @@ const AddFeatured = () => {
         const date = form.date.value;
         const courseFee = form.courseFee.value;
 
-        const featureCourse = {backgroundImage,courseName,instructorImage,instructorName,description,time,date,courseFee}
+        const featureCourse = { backgroundImage, courseName, instructorImage, instructorName, description, time, date, courseFee }
         console.log(featureCourse);
 
         // send data to the server
         fetch('http://localhost:5000/featuredCourse', {
-            method:'POST',
-            headers:{
-                'content-type':'application/json'
-            }, 
-            body:JSON.stringify(featureCourse)
-           
-        })
-        .then(res =>res.json())
-        .then(data =>{
-            console.log(data)
-            if(data.insertedId){
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "user added succesfully..",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(featureCourse)
 
-            }
         })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "user added succesfully..",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+
+                }
+            })
 
 
 
