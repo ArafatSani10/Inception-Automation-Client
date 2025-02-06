@@ -27,7 +27,11 @@ const FeaturedCourseCard = ({ courses }) => {
                 <div className="absolute inset-y-0 max-sm:-mx-2 left-0 w-[400px] bg-black bg-opacity-40 p-5 flex flex-col justify-center">
                     <div className="bg-white  p-6 rounded-lg shadow-lg w-full">
                         {/* Course Name */}
+                        <Link to={`/featuredCourse/${_id}`}>
                         <h2 className="text-[18px] font-semibold  text-gray-800 mb-4">{courseName}</h2>
+                        
+                        </Link>
+                    
 
                         {/* Instructor Info (Image and Name on the same line) */}
                         <div className="flex items-center gap-1  mb-4">

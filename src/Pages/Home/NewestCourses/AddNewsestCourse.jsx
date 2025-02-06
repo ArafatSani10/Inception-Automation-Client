@@ -30,30 +30,30 @@ const AddNewestCourse = () => {
         const newestCourse = {
             detailsBackgroundImage, courseName, workMethod, instructorImage, instructorName, learn1, learn2, learn3, learn4, learn5, learn6, tag1, tag2, tag3, tag4, tag5, aboutCourse, date, time, courseFee, backgroundCardImage
         };
-        
+
         console.log(newestCourse);
         // send data to the server
 
         fetch('http://localhost:5000/newest', {
-            method:'POST',
-            headers:{
-                'content-type':'application/json'
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(newestCourse)
+            body: JSON.stringify(newestCourse)
         })
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data)
-            if(data.insertedId){
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Newest data send to database done",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Newest data send to database done",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
 
 
     }
@@ -346,3 +346,4 @@ const AddNewestCourse = () => {
 };
 
 export default AddNewestCourse;
+
