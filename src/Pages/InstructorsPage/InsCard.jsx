@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const InsCard = ({ instructor }) => {
-    const { instructorImage, workTitle, instructorName, followerFollowing, student, courses, reviews, meeting, about, skills, skills1, skills2, skills3, skills4, skills5, following, bg } = instructor;
+    const {_id, instructorImage, workTitle, instructorName, followerFollowing, student, courses, reviews, meeting, about, skills, skills1, skills2, skills3, skills4, skills5, following, bg } = instructor;
 
     // Calculate rating based on reviews or another relevant metric (assuming it's a number out of 5)
     const rating = reviews;  // assuming reviews represent the rating out of 5
     const totalStars = 5;
 
-    // Create an array of filled and empty stars
+    // Create an array of filled and empty starsa
     const stars = Array.from({ length: totalStars }, (_, index) => index < rating ? '★' : '☆');
 
     return (
@@ -26,7 +27,10 @@ const InsCard = ({ instructor }) => {
             </div>
 
             <div>
-                <button className='btn md:mx-36 max-sm:mx-28 mt-5 bg-green-400 text-white hover:bg-green-300 hover:text-black'> Profile</button>
+               <Link to={`/instructor/${_id}`}>   
+               <button className='btn md:mx-36 max-sm:mx-28 mt-5 bg-green-400 text-white hover:bg-green-300 hover:text-black'> Profile</button>
+               
+               </Link>
             </div>
         </div>
     );

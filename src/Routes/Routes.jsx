@@ -11,6 +11,7 @@ import NewestCourses from "../Pages/Home/NewestCourses/NewestCourses";
 import NewestCoursesDetails from "../Pages/Home/NewestCourses/NewestCoursesDetails";
 import AddInstructor from "../Pages/InstructorsPage/AddInstructor";
 import Instructor from "../Pages/InstructorsPage/Instructor";
+import InstructorDetails from "../Pages/InstructorsPage/InstructorDetails";
 
 
 
@@ -50,6 +51,11 @@ export const router = createBrowserRouter([
         path:'/newest/:id', 
         element:<NewestCoursesDetails></NewestCoursesDetails>,
         loader:({params}) => fetch(`http://localhost:5000/newest/${params.id}`)
+      },
+      {
+        path:'/instructor/:id',
+        element:<InstructorDetails></InstructorDetails>,
+        loader:({params})=>fetch(`http://localhost:5000/instructor/${params.id}`)
       },
 
       {
